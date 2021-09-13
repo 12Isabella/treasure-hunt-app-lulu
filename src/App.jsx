@@ -1,8 +1,22 @@
 import "./App.css";
 
 function App() {
+  function getLocation() {
+    function success(pos) {
+      let coordinates = pos.coords;
+      console.log(coordinates);
+      let latUser = coordinates.latitude;
+      console.log(latUser);
+      let lonUser = coordinates.longitude;
+      console.log(lonUser);
+    }
+    navigator.geolocation.getCurrentPosition(success);
+  }
+
   function checkLocation(event) {
     event.preventDefault();
+    alert("Checking your location...");
+    getLocation();
   }
   return (
     <div className="App">
