@@ -1,16 +1,38 @@
 import "./App.css";
+import { useState } from "react";
 
 function App() {
+  let [userLocationLat, setUserLocationLat] = useState("unknown");
+  let [userLocationLon, setUserLocationLon] = useState("unknown");
+
+  function compareLocation() {
+    let pointAlat = 59.90867924548992;
+    let pointAlon = 10.749348866894646;
+    let pointBlat = 59.906426634818516;
+    let pointBlon = 10.754803936197451;
+    if (
+      userLocationLat >= pointBlat &&
+      userLocationLat <= pointAlat &&
+      userLocationLon <= pointBlon &&
+      userLocationLon >= pointAlon
+    ) {
+      return alert("true");
+    } else {
+      return alert("nope");
+    }
+  }
+
   function getLocation() {
     function success(pos) {
       let coordinates = pos.coords;
       console.log(coordinates);
-      let latUser = coordinates.latitude;
-      console.log(latUser);
-      let lonUser = coordinates.longitude;
-      console.log(lonUser);
+      setUserLocationLat(coordinates.latitude);
+      console.log(userLocationLat);
+      setUserLocationLon(coordinates.longitude);
+      console.log(userLocationLon);
     }
     navigator.geolocation.getCurrentPosition(success);
+    compareLocation();
   }
 
   function checkLocation(event) {
