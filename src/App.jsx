@@ -1,21 +1,27 @@
 import "./App.css";
+import locations from "./locations";
+import { useState } from "react";
 
 function App() {
+  let [currentLocation, setCurrentLocation] = useState(locations[0]);
+
   function compareLocation(userLocationLat, userLocationLon) {
-    let pointAlat = 59.90867924548992;
-    let pointAlon = 10.749348866894646;
-    let pointBlat = 59.906426634818516;
-    let pointBlon = 10.754803936197451;
+    let northWestLat = currentLocation.coordinates.northWest.lat;
+    let northWestLon = currentLocation.coordinates.northWest.lon;
+    let southEastLat = currentLocation.coordinates.southEast.lat;
+    let southEastLon = currentLocation.coordinates.southEast.lon;
 
     if (
-      userLocationLat >= pointBlat &&
-      userLocationLat <= pointAlat &&
-      userLocationLon <= pointBlon &&
-      userLocationLon >= pointAlon
+      userLocationLat >= southEastLat &&
+      userLocationLat <= northWestLat &&
+      userLocationLon <= southEastLon &&
+      userLocationLon >= northWestLon
     ) {
-      return alert("true");
+      alert("true");
+      return true;
     } else {
-      return alert("nope");
+      alert("Idiot! Du er på feil sted.");
+      return false;
     }
   }
 
@@ -41,8 +47,12 @@ function App() {
     <div className="App">
       <h1 className="mt-3">Velkommen til Oslo!</h1>
       <h2>Her er dine clues for å finne stedet du skal til...</h2>
-      <p>Du skal til Operahuset.</p>
-      <img src=" /OsloOpera.jpg" alt="OsloOpera" width="300px" />
+      <p>{currentLocation.info}</p>
+      <img
+        src={currentLocation.image}
+        alt={currentLocation.name}
+        width="300px"
+      />
       <h3 className="mt-2">Du vet hvor du skal? Gå, gå, gå!</h3>
       <h2>Du er på riktig sted? Trykk på knappen! Let's see...</h2>
       <a href="/" className="btn btn-warning mt-3 mb-3" onClick={checkLocation}>
