@@ -3,8 +3,8 @@ import locations from "./locations";
 import { useState } from "react";
 
 function App() {
-  let [currentLocation, setCurrentLocation] = useState(locations[0]);
-
+  let [locationIndex, setLocationIndex] = useState(0);
+  const currentLocation = locations[locationIndex];
   function compareLocation(userLocationLat, userLocationLon) {
     let northWestLat = currentLocation.coordinates.northWest.lat;
     let northWestLon = currentLocation.coordinates.northWest.lon;
@@ -18,9 +18,13 @@ function App() {
       userLocationLon >= northWestLon
     ) {
       alert("true");
-      return true;
+      if (locationIndex < locations.length - 1) {
+        setLocationIndex(locationIndex + 1);
+      } else {
+        setLocationIndex(0);
+      }
     } else {
-      alert("Idiot! Du er på feil sted.");
+      alert("Du er på feil sted.");
       return false;
     }
   }
