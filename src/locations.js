@@ -1,7 +1,7 @@
 const locations = [
   {
     name: "OsloOpera",
-    info: "Du skal til Operahuset.",
+    info: "Du skal se på havet. Men står på hvit stein mens du gjør det.",
     image: "/OsloOpera.jpg",
     coordinates: {
       northWest: { lat: 59.9094, lon: 10.7493 },
@@ -15,6 +15,15 @@ const locations = [
     coordinates: {
       northWest: { lat: 59.9176, lon: 10.7539 },
       southEast: { lat: 59.9171, lon: 10.7552 },
+    },
+  },
+  {
+    name: "Frognerpark",
+    info: "Du skal se nakene mennesker. Men dem er ikke levende...",
+    image: "/Frogner.jpg",
+    coordinates: {
+      northWest: { lat: 59.9351, lon: 10.6812 },
+      southEast: { lat: 59.9218, lon: 10.7137 },
     },
   },
 ];
