@@ -1,5 +1,6 @@
 const locations = [
   {
+    index: 0,
     name: "OsloOpera",
     info: "Du skal se på havet. Men står på hvit stein mens du gjør det.",
     image: "/OsloOpera.jpg",
@@ -9,6 +10,7 @@ const locations = [
     },
   },
   {
+    index: 1,
     name: "Peloton",
     info: "Du skal spise Pizza.",
     image: "/Peloton.jpg",
@@ -18,6 +20,7 @@ const locations = [
     },
   },
   {
+    index: 2,
     name: "Frognerpark",
     info: "Du skal se nakene mennesker. Men dem er ikke levende...",
     image: "/Frogner.jpg",

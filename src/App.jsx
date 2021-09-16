@@ -4,40 +4,52 @@ import { useState } from "react";
 
 function App() {
   let [locationIndex, setLocationIndex] = useState(0);
-  const currentLocation = locations[locationIndex];
-  function compareLocation(userLocationLat, userLocationLon) {
-    let northWestLat = currentLocation.coordinates.northWest.lat;
-    let northWestLon = currentLocation.coordinates.northWest.lon;
-    let southEastLat = currentLocation.coordinates.southEast.lat;
-    let southEastLon = currentLocation.coordinates.southEast.lon;
 
-    if (
-      userLocationLat >= southEastLat &&
-      userLocationLat <= northWestLat &&
-      userLocationLon <= southEastLon &&
-      userLocationLon >= northWestLon
-    ) {
-      alert("true");
-      if (locationIndex < locations.length - 1) {
-        setLocationIndex(locationIndex + 1);
-      } else {
-        setLocationIndex(0);
-      }
-    } else {
-      alert("Du er på feil sted.");
-      return false;
-    }
+  const currentLocation = locations[locationIndex];
+
+  function compareLocation(position, coordinates) {
+    return (
+      position.lat >= coordinates.southEast.lat &&
+      position.lat <= coordinates.northWest.lat &&
+      position.lon <= coordinates.southEast.lon &&
+      position.lon >= coordinates.northWest.lon
+    );
   }
 
   function getLocation() {
     function handleCoords(pos) {
       let coordinates = pos.coords;
 
-      const userLocationLat = coordinates.latitude;
+      const userLocation = {
+        lat: coordinates.latitude,
+        lon: coordinates.longitude,
+      };
 
-      const userLocationLon = coordinates.longitude;
+      let foundLocation = null;
 
-      compareLocation(userLocationLat, userLocationLon);
+      locations.forEach(function (location) {
+        if (compareLocation(userLocation, location.coordinates)) {
+          foundLocation = location;
+        }
+      });
+
+      if (foundLocation !== null) {
+        if (foundLocation.index === locations.length - 1) {
+          setLocationIndex(0);
+          console.log("User is at end loactaion.");
+        } else {
+          if (locationIndex < locations.length - 1) {
+            setLocationIndex(foundLocation.index + 1);
+            console.log("User is at " + foundLocation.name);
+          } else {
+            setLocationIndex(0);
+            console.log("User is at first location.");
+          }
+        }
+      } else {
+        alert("Du er på feil sted.");
+        console.log("User is not at any of these locations.");
+      }
     }
     navigator.geolocation.getCurrentPosition(handleCoords);
   }
