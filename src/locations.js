@@ -15,8 +15,8 @@ const locations = [
     info: "Du skal få lov å ta deg en Kaffee først! Her hadde en bestemmt Indisk Guru også gjerne slått seg ned. Han du ser på bildet har blant annet opphøyet en som kjempet i ringen og en som kjempet for frihet! Pass på å ikke havne for nært ved havet!",
     image: "/sri-chinmoy.jpg",
     coordinates: {
-      northWest: { lat: 59.9275, lon: 10.7155 },
-      southEast: { lat: 59.9373, lon: 10.7165 },
+      northWest: { lat: 59.9276, lon: 10.7155 },
+      southEast: { lat: 59.9272, lon: 10.7164 },
     },
   },
   {
