@@ -37,14 +37,12 @@ function App() {
         if (foundLocation.index === locations.length - 1) {
           setLocationIndex(0);
           console.log("User is at end loactaion.");
+        } else if (locationIndex < locations.length - 1) {
+          setLocationIndex(foundLocation.index + 1);
+          console.log("User is at " + foundLocation.name);
         } else {
-          if (locationIndex < locations.length - 1) {
-            setLocationIndex(foundLocation.index + 1);
-            console.log("User is at " + foundLocation.name);
-          } else {
-            setLocationIndex(0);
-            console.log("User is at first location.");
-          }
+          setLocationIndex(0);
+          console.log("User is at first location.");
         }
       } else {
         alert("Du er på feil sted.");
