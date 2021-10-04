@@ -1,6 +1,16 @@
 const locations = [
   {
     index: 0,
+    name: "Eventyrbrua",
+    info: "Trykk på knappen for å få første clue!",
+    image: "/Kongeship.jpg",
+    coordinates: {
+      northWest: { lat: 59.9185, lon: 10.7557 },
+      southEast: { lat: 59.9179, lon: 10.7565 },
+    },
+  },
+  {
+    index: 1,
     name: "OsloSlott",
     info: "Du skal til et sted som har hatt minst tre adresser. En person som bor her har en oljeplattform oppkalt etter seg.",
     image: "/Crocus.jpg",
@@ -10,7 +20,7 @@ const locations = [
     },
   },
   {
-    index: 1,
+    index: 2,
     name: "FragranceOf the Heart",
     info: "Du skal få lov å ta deg en Kaffee først! Her hadde en bestemmt Indisk Guru også gjerne slått seg ned. Han du ser på bildet har blant annet opphøyet en som kjempet i ringen og en som kjempet for frihet! Pass på å ikke havne for nært ved havet!",
     image: "/sri-chinmoy.jpg",
@@ -20,7 +30,7 @@ const locations = [
     },
   },
   {
-    index: 2,
+    index: 3,
     name: "Frognerpark",
     info: "Du skal se nakene mennesker. Men dem er ikke levende...",
     image: "/Baby.jpg",
@@ -30,7 +40,7 @@ const locations = [
     },
   },
   {
-    index: 3,
+    index: 4,
     name: "Damplassen",
     info: "En svensk fiskedamm er ikke på monopolbrettet, men stedet hvor den ligger har sitt eget felt.",
     image: "/Pizza.jpg",
@@ -40,7 +50,7 @@ const locations = [
     },
   },
   {
-    index: 4,
+    index: 5,
     name: "EvaldRyghsPlass",
     info: "Du skal til et sted, hvor du kan både leke og minnes en trøndersk ordfører som var glad i penger og kultur. Men hvis du vil hoppe så er du på villspor.",
     image: "/EvaldRygh.jpg",
@@ -50,7 +60,7 @@ const locations = [
     },
   },
   {
-    index: 5,
+    index: 6,
     name: "Peloton",
     info: "Du skal spise Pizza.",
     image: "/Peloton.jpg",
