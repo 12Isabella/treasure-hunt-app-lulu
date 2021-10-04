@@ -2,7 +2,7 @@ const locations = [
   {
     index: 0,
     name: "Eventyrbrua",
-    info: "Trykk på knappen for å få første clue!",
+    info: "Trykk på knappen mens du står på eventyrbrua for å få første clue!",
     image: "/Kongeship.jpg",
     coordinates: {
       northWest: { lat: 59.9185, lon: 10.7557 },
