@@ -64,7 +64,14 @@
     rgba(228, 186, 40, 0.47939262472885036) 94%
   );
 }
-
+.gradient7 {
+  background: rgb(128, 34, 300);
+  background: linear-gradient(
+    45deg,
+    rgba(166, 34, 195, 0.9332107843137255) 7%,
+    rgba(228, 186, 40, 0.47939262472885036) 94%
+  );
+}
 .container {
   max-width: 960px;
   margin-right: auto;

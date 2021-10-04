@@ -36,7 +36,7 @@ function App() {
 
       if (foundLocation !== null) {
         if (foundLocation.index === locations.length - 1) {
-          setLocationIndex(0);
+          setLocationIndex(locations.length - 1);
           console.log("User is at end loactaion.");
           setBackgroundGradient(`gradient${locationIndex}`);
         } else if (foundLocation.index < locations.length - 1) {

@@ -52,7 +52,7 @@ const locations = [
   {
     index: 5,
     name: "EvaldRyghsPlass",
-    info: "Du skal til et sted, hvor du kan både leke og minnes en trøndersk ordfører som var glad i penger og kultur. Men hvis du vil hoppe så er du på villspor.",
+    info: "Du skal til et sted, hvor du kan både spille ballspill, leke og minnes en trøndersk ordfører som var glad i penger og kultur. Men hvis du vil hoppe så er du på villspor.",
     image: "/EvaldRygh.jpg",
     coordinates: {
       northWest: { lat: 59.9295, lon: 10.7469 },
@@ -61,12 +61,22 @@ const locations = [
   },
   {
     index: 6,
-    name: "Peloton",
-    info: "Du skal spise Pizza.",
-    image: "/Peloton.jpg",
+    name: "LofthusTranen",
+    info: "Nå kan du nesten se oss vinke fra målet. Dette her (uten Leber) må du drikke hvis du har tapt Stocherkahn løpet i Tuebingen. Nipaporn har vært her.",
+    image: "/Stocherkahn.jpg",
     coordinates: {
-      northWest: { lat: 59.9176, lon: 10.7539 },
-      southEast: { lat: 59.9171, lon: 10.7552 },
+      northWest: { lat: 59.9283, lon: 10.7484 },
+      southEast: { lat: 59.9279, lon: 10.7495 },
+    },
+  },
+  {
+    index: 7,
+    name: "Mål",
+    info: "Hurra! Du klarte det! Du er så flink, flink, flink, flink, flink. Velkommen in! Komm på andre etasje!",
+    image: "/Hurra.jpg",
+    coordinates: {
+      northWest: { lat: 59.9283, lon: 10.7485 },
+      southEast: { lat: 59.9279, lon: 10.7495 },
     },
   },
 ];
