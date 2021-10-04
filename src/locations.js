@@ -15,8 +15,8 @@ const locations = [
     info: "Du skal til et sted som har hatt minst tre adresser. En person som bor her har en oljeplattform oppkalt etter seg.",
     image: "/Crocus.jpg",
     coordinates: {
-      northWest: { lat: 59.9183, lon: 10.7255 },
-      southEast: { lat: 59.916, lon: 10.7301 },
+      northWest: { lat: 59.9184, lon: 10.7259 },
+      southEast: { lat: 59.9157, lon: 10.7301 },
     },
   },
   {
@@ -56,7 +56,7 @@ const locations = [
     image: "/EvaldRygh.jpg",
     coordinates: {
       northWest: { lat: 59.9295, lon: 10.7469 },
-      southEast: { lat: 59.929, lon: 10.7478 },
+      southEast: { lat: 59.9287, lon: 10.7486 },
     },
   },
   {

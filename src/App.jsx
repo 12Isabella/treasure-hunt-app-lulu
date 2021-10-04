@@ -39,10 +39,10 @@ function App() {
           setLocationIndex(0);
           console.log("User is at end loactaion.");
           setBackgroundGradient(`gradient${locationIndex}`);
-        } else if (locationIndex < locations.length - 1) {
+        } else if (foundLocation.index < locations.length - 1) {
           setLocationIndex(foundLocation.index + 1);
           console.log("User is at " + foundLocation.name);
-          setBackgroundGradient(`gradient${locationIndex + 1}`);
+          setBackgroundGradient(`gradient${locationIndex}`);
         }
       } else {
         alert("Du er på feil sted.");
