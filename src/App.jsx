@@ -54,7 +54,7 @@ function App() {
 
   function checkLocation(event) {
     event.preventDefault();
-    alert("Checking your location...");
+
     getLocation();
   }
   return (

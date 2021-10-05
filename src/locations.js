@@ -12,7 +12,7 @@ const locations = [
   {
     index: 1,
     name: "OsloSlott",
-    info: "Du skal til et sted som har hatt minst tre adresser. En person som bor her har en oljeplattform oppkalt etter seg.",
+    info: "Du skal til et sted som har hatt minst tre adresser. En person som bor her har en oljeplattform oppkalt etter seg. Let them eat cake!",
     image: "/Crocus.jpg",
     coordinates: {
       northWest: { lat: 59.9184, lon: 10.7259 },
@@ -22,7 +22,7 @@ const locations = [
   {
     index: 2,
     name: "FragranceOf the Heart",
-    info: "Du skal få lov å ta deg en Kaffee først! Her hadde en bestemmt Indisk Guru også gjerne slått seg ned. Han du ser på bildet har blant annet opphøyet en som kjempet i ringen og en som kjempet for frihet! Pass på å ikke havne for nært ved havet!",
+    info: "Du skal få lov å ta deg en Kaffee først! Her hadde en bestemmt Indisk Guru også gjerne slått seg ned. Han du ser på bildet har blant annet opphøyet en som kjempet i ringen og en som kjempet for frihet! Pass på å IKKE havne for nært ved havet!",
     image: "/sri-chinmoy.jpg",
     coordinates: {
       northWest: { lat: 59.9276, lon: 10.7155 },
@@ -62,7 +62,7 @@ const locations = [
   {
     index: 6,
     name: "LofthusTranen",
-    info: "Nå kan du nesten se oss vinke fra målet. Dette her (uten Leber) må du drikke hvis du har tapt Stocherkahn løpet i Tuebingen. Nipaporn har vært her.",
+    info: "Nå kan du nesten se oss vinke fra målet. Dette her (uten Leber) må du drikke hvis du har tapt Stocherkahn løpet i Tuebingen. Nipaporn Norse har vært her.",
     image: "/Stocherkahn.jpg",
     coordinates: {
       northWest: { lat: 59.9283, lon: 10.7484 },
