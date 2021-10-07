@@ -3,8 +3,11 @@ import locations from "./locations";
 import { useState } from "react";
 
 function App() {
-  let [locationIndex, setLocationIndex] = useState(0);
-  let [backgroundGradient, setBackgroundGradient] = useState("gradient0");
+  const [locationIndex, setLocationIndex] = useState(function () {
+    const locationIndexJSON = window.localStorage.getItem("location") || "0";
+    return parseInt(locationIndexJSON);
+  });
+  const [backgroundGradient, setBackgroundGradient] = useState("gradient0");
 
   const currentLocation = locations[locationIndex];
 
@@ -31,6 +34,9 @@ function App() {
       locations.forEach(function (location) {
         if (compareLocation(userLocation, location.coordinates)) {
           foundLocation = location;
+          // set location in local storage so user can see clues even while being at the wrong place.
+
+          window.localStorage.setItem("location", foundLocation.index + 1);
         }
       });
 
@@ -38,11 +44,9 @@ function App() {
         if (foundLocation.index === locations.length - 1) {
           setLocationIndex(locations.length - 1);
           console.log("User is at end loactaion.");
-          setBackgroundGradient(`gradient${locationIndex}`);
         } else if (foundLocation.index < locations.length - 1) {
           setLocationIndex(foundLocation.index + 1);
           console.log("User is at " + foundLocation.name);
-          setBackgroundGradient(`gradient${locationIndex}`);
         }
       } else {
         alert("Du er på feil sted.");
@@ -54,6 +58,11 @@ function App() {
 
   function checkLocation(event) {
     event.preventDefault();
+
+    // update backgroundGradient
+    setBackgroundGradient(
+      `gradient${Math.floor(Math.random() * locations.length)}`
+    );
 
     getLocation();
   }
