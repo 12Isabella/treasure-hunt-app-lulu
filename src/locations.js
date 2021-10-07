@@ -72,7 +72,7 @@ const locations = [
   {
     index: 7,
     name: "Mål",
-    info: "Hurra! Du klarte det! Du er så flink, flink, flink, flink, flink. Velkommen in! Komm på andre etasje!",
+    info: "Hurra! Du klarte det! Du er så flink, flink, flink, flink, flink. Velkommen in!",
     image: "/Hurra.jpg",
     coordinates: {
       northWest: { lat: 59.9283, lon: 10.7485 },
